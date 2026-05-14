@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="{{ weather.main if weather else '' }}">
+   
+
+<div class="overlay">
+<div class="container">
+    <h1> Weather App</h1>
+
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter city" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if weather %}
+        {% if weather.error %}
+            <p class="error">{{ weather.error }}</p>
+        {% else %}
+            <div class="card">
+                <h2>{{ weather.city }}</h2>
+                <img src="{{ weather.icon }}" alt="weather icon">
+                <p> {{ weather.temp }} °C</p>
+                <p>{{ weather.desc }}</p>
+                <p> {{ weather.humidity }}%</p>
+            </div>
+        {% endif %}
+    {% endif %}
+</div>
+</div>
+
+</body>
+</html>

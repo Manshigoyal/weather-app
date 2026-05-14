@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: url("https://source.unsplash.com/1600x900/?weather") no-repeat center center/cover;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+img {
+    width: 100px;
+}
+
+.error {
+    color: red;
+}
+
+body.Clear {
+    background: url("https://source.unsplash.com/1600x900/?sunny") no-repeat center/cover;
+}
+
+body.Clouds {
+    background: url("https://source.unsplash.com/1600x900/?cloudy") no-repeat center/cover;
+}
+
+body.Rain {
+    background: url("https://source.unsplash.com/1600x900/?rain") no-repeat center/cover;
+}
+
+body.Snow {
+    background: url("https://source.unsplash.com/1600x900/?snow") no-repeat center/cover;
+}
+
+body.Haze {
+    background: url("https://source.unsplash.com/1600x900/?fog") no-repeat center/cover;
+}
+
+body {
+    transition: background 1s ease-in-out;
+} 
